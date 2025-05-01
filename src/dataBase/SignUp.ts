@@ -2,50 +2,51 @@ import { supabase } from "./supabase";
 
 export async function signUp(email: string, password: string, nombre: string) {
   try {
-    console.log("Registrando en Supabase Auth:", email, password);
+    console.log("Registering in Supabase Auth:", email, password);
 
-    // 🔹 Registrar usuario en Supabase Auth
+    // 🔹 Register the user in Supabase Auth
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
     });
 
-    console.log("Respuesta de Supabase Auth:", data, error);
+    console.log("Supabase Auth response:", data, error);
 
     if (error) {
       return { success: false, message: error.message };
     }
 
     if (!data.user) {
-      return { success: false, message: "No se pudo registrar el usuario." };
+      return { success: false, message: "User registration failed." };
     }
 
-    console.log("Guardando en la tabla 'users'...", nombre);
+    console.log("Saving to the 'users' table...", nombre);
 
+    // Insert user details into the 'users' table
     const { data: insertedData, error: dbError } = await supabase.from("users").insert([
       {
-        id: data.user.id, // Ensure this matches the ID from Supabase Auth
-        nombre: nombre,
-        email: email,
-        avatar: null, // Initialize avatar as null
+        id: data.user.id, // User ID from Supabase Auth
+        nombre: nombre, // User's name
+        email: email, // User's email
+        avatar: null, // Avatar is initialized as null
       },
-    ]).select(); // Use `.select()` to return the inserted data for verification
+    ]).select(); // Use `.select()` to retrieve the inserted data for verification
 
     if (dbError) {
-      console.error("Error al insertar en la tabla 'users':", dbError);
-      console.error("Datos enviados a la tabla 'users':", {
+      console.error("Error inserting into the 'users' table:", dbError);
+      console.error("Data sent to the 'users' table:", {
         id: data.user.id,
         nombre: nombre,
         email: email,
       });
-      return { success: false, message: "Usuario creado, pero no guardado en la BD." };
+      return { success: false, message: "User created, but not saved in the database." };
     }
 
-    console.log("Datos insertados en la tabla 'users':", insertedData); // Log the inserted data for verification
+    console.log("Data inserted into the 'users' table:", insertedData); // Log the inserted data for verification
 
     return { success: true, user: data.user };
   } catch (err) {
-    console.error("Error inesperado durante el registro:", err); // Log unexpected errors
-    return { success: false, message: "Ocurrió un error inesperado." };
+    console.error("Unexpected error during registration:", err); // Log unexpected errors
+    return { success: false, message: "An unexpected error occurred." };
   }
 }

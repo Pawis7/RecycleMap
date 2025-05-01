@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import {
   View,
@@ -223,7 +221,7 @@ export const MainScreen = ({ navigation }) => {
             <Text style={styles.greeting}>Hola, {userName}</Text>
             <View style={styles.locationContainer}>
               <MaterialCommunityIcons name="map-marker" size={16} color="#34D399" />
-              <Text style={styles.location}>Campus Universitario</Text>
+              <Text style={styles.location}>CUCEI, UdeG</Text>
             </View>
           </View>
           <TouchableOpacity style={styles.searchButton} onPress={handleOpenSearch}>

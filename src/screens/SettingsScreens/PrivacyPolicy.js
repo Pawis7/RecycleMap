@@ -1,10 +1,16 @@
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView } from "react-native"
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView, Alert } from "react-native"
 import { MaterialCommunityIcons } from "@expo/vector-icons"
 import { useNavigation } from "@react-navigation/native"
 import { LinearGradient } from "expo-linear-gradient"
+import * as Clipboard from "expo-clipboard" // Added Clipboard import
 
 export default function PrivacyPolicy() {
   const navigation = useNavigation()
+
+  const copyToClipboard = () => {
+    Clipboard.setStringAsync("saul.arciniega777@gmail.com") // Copies the email to clipboard
+    
+  }
 
   return (
     <SafeAreaView style={styles.container}>
@@ -138,24 +144,36 @@ export default function PrivacyPolicy() {
               a acceder, actualizar o eliminar la información que tenemos sobre ti.
             </Text>
           </View>
+          
+          <View style={styles.section}>
+            <View style={styles.sectionHeader}>
+              <MaterialCommunityIcons name="copyright" size={24} color="#34D399" style={styles.sectionIcon} />
+              <Text style={styles.sectionTitle}>7. Imagenes y derechos de autor</Text>
+            </View>
+            <Text style={styles.paragraph}>
+              Esta Aplacion no recopila imagenes en las base de datos, recopila la url de donde se encuentra la imagen,
+              ademas no buscamos lucrar con esta aplicacion, de cualquier manera si una imagen es de tu propiedad y no
+              aceptas que se use en esta aplicacion, por favor contactanos y la eliminaremos de inmediato.
+            </Text>
+          </View>
 
           <View style={styles.section}>
             <View style={styles.sectionHeader}>
               <MaterialCommunityIcons name="email" size={24} color="#34D399" style={styles.sectionIcon} />
-              <Text style={styles.sectionTitle}>7. Contacto</Text>
+              <Text style={styles.sectionTitle}>8. Contacto</Text>
             </View>
             <Text style={styles.paragraph}>
               Si tienes preguntas o comentarios sobre esta Política de Privacidad, por favor contáctanos en:
             </Text>
-            <TouchableOpacity style={styles.contactButton}>
+            <TouchableOpacity style={styles.contactButton} onPress={copyToClipboard}>
               <MaterialCommunityIcons name="email-outline" size={20} color="#fff" />
               <Text style={styles.contactButtonText}>saul.arciniega777@gmail.com</Text>
             </TouchableOpacity>
           </View>
 
           <View style={styles.footer}>
-            <MaterialCommunityIcons name="copyright" size={16} color="#666" />
-            <Text style={styles.footerText}>2025 Recycle Map. Todos los derechos reservados.</Text>
+            <MaterialCommunityIcons name="copyright" size={14} color="#666" />
+            <Text style={styles.footerText}>2025 Recycle Map. Casi todos los derechos reservados.</Text>
           </View>
         </View>
       </ScrollView>
@@ -290,10 +308,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginTop: 16,
-    marginBottom: 24,
+    marginBottom: 14,
   },
   footerText: {
-    fontSize: 14,
+    fontSize: 12,
     color: "#666",
     marginLeft: 4,
   },

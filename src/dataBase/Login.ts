@@ -13,10 +13,10 @@ export async function logIn(email: string, password: string) {
     }
 
     if (!data.session) {
-      return { success: false, message: "No se pudo iniciar sesión." };
+      return { success: false, message: "Could not log in." };
     }
 
-    // Guardar sesión localmente
+    // Save session locally
     const { data: userInfo, error: userError } = await supabase
       .from("users")
       .select("nombre, role, avatar") // Include the avatar field
@@ -24,8 +24,8 @@ export async function logIn(email: string, password: string) {
       .single();
 
     if (userError || !userInfo) {
-      console.error("Error al obtener información del usuario:", userError);
-      return { success: false, message: "Error al obtener información del usuario." };
+      console.error("Error fetching user information:", userError);
+      return { success: false, message: "Error fetching user information." };
     }
 
     const userData = {
@@ -42,6 +42,6 @@ export async function logIn(email: string, password: string) {
 
     return { success: true, user: data.user };
   } catch (err) {
-    return { success: false, message: "Error inesperado al iniciar sesión." };
+    return { success: false, message: "Unexpected error during login." };
   }
 }

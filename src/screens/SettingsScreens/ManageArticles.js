@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import {
   View,
@@ -26,6 +24,24 @@ import { LinearGradient } from "expo-linear-gradient"
 
 const ALLOWED_CATEGORIES = ["Guías", "Medio Ambiente", "Consejos", "Información"]
 
+const formatDate = (date) => {
+  try {
+    const parsedDate = new Date(date);
+    if (isNaN(parsedDate)) throw new Error("Invalid Date");
+    return parsedDate.toLocaleDateString("es-ES", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    }).toUpperCase();
+  } catch {
+    return new Date().toLocaleDateString("es-ES", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    }).toUpperCase();
+  }
+};
+
 export default function ManageArticles() {
   const navigation = useNavigation()
   const route = useRoute()
@@ -43,7 +59,7 @@ export default function ManageArticles() {
     category: articleToEdit?.category || "",
     featured: articleToEdit?.featured || false,
     is_new: articleToEdit?.isNew || false,
-    date: articleToEdit?.date || new Date().toLocaleDateString("es-ES", { day: "2-digit", month: "short", year: "4-digit" }).toUpperCase(),
+    date: formatDate(articleToEdit?.date || new Date()),
   })
 
   useEffect(() => {
@@ -53,7 +69,6 @@ export default function ManageArticles() {
 
         const { data: session, error: sessionError } = await supabase.auth.getSession()
         if (sessionError || !session?.session?.user?.id) {
-          Alert.alert("Error", "No se pudo verificar la sesión.")
           navigation.replace("Main")
           return
         }

@@ -78,7 +78,7 @@ export default function About() {
 
           <Text style={styles.sectionTitle}>Desarrollado por:</Text>
           <View style={styles.developerCard}>
-            <Text style={styles.developer}>Equipo de Desarrollo CUCEI</Text>
+            <Text style={styles.developer}>Saul Arciniega, Aleida Maldonado, Anthony Flores</Text>
             <Text style={styles.developerRole}>Universidad de Guadalajara</Text>
             <TouchableOpacity style={styles.websiteButton} onPress={openWebsite}>
               <MaterialCommunityIcons name="web" size={18} color="#fff" />
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
     color: "#444",
     lineHeight: 24,
     marginBottom: 16,
-    textAlign: "justify",
+    
   },
   sectionTitle: {
     fontSize: 18,
@@ -219,12 +219,14 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.05,
     shadowRadius: 2,
     elevation: 1,
+    textAlign: "justify",
   },
   developer: {
     fontSize: 18,
     fontWeight: "600",
     color: "#333",
     marginBottom: 4,
+    textAlign: "center",
   },
   developerRole: {
     fontSize: 14,

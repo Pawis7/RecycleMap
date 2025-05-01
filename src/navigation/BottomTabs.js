@@ -1,5 +1,3 @@
-"use client"
-
 import { useRef, useEffect } from "react"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { TouchableOpacity, View, StatusBar, Platform, Dimensions, StyleSheet, Animated } from "react-native"

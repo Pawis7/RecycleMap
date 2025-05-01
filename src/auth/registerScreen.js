@@ -1,5 +1,3 @@
-"use client"
-
 import {
   StyleSheet,
   Text,
@@ -31,7 +29,7 @@ const validName = (name) => {
 }
 
 const validateEmail = (email) => {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  const regex = /^[^\s@]+@alumnos\.udg\.mx$/; // Updated regex to allow only @alumnos.udg.mx
   return regex.test(email)
 }
 
