@@ -9,7 +9,7 @@
 
 1. **Clonar el Repositorio**:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/Pawis7/RecycleMap
    cd Recycle_Map
    ```
 
