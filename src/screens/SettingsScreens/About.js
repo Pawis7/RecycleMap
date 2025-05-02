@@ -78,7 +78,7 @@ export default function About() {
 
           <Text style={styles.sectionTitle}>Desarrollado por:</Text>
           <View style={styles.developerCard}>
-            <Text style={styles.developer}>Saul Arciniega, Aleida Maldonado, Anthony Flores</Text>
+            <Text style={styles.developer}>Saul Arciniega, Leonardo Rios</Text>
             <Text style={styles.developerRole}>Universidad de Guadalajara</Text>
             <TouchableOpacity style={styles.websiteButton} onPress={openWebsite}>
               <MaterialCommunityIcons name="web" size={18} color="#fff" />
