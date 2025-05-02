@@ -115,7 +115,7 @@ export default function ManageUsers() {
     <View style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-          <MaterialCommunityIcons name="arrow-left" size={24} color="#333" />
+          <MaterialCommunityIcons name="arrow-left" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Gestionar Usuarios</Text>
         <View style={styles.placeholder} />
@@ -158,13 +158,13 @@ export default function ManageUsers() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "#000000",
   },
   loadingContainer: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "#000000",
   },
   header: {
     flexDirection: "row",
@@ -172,9 +172,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingHorizontal: 16,
     paddingVertical: 16,
-    backgroundColor: "#fff",
+    backgroundColor: "#111111",
     borderBottomWidth: 1,
-    borderBottomColor: "#f0f0f0",
+    borderBottomColor: "#222222",
   },
   backButton: {
     padding: 8,
@@ -182,27 +182,28 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#333",
+    color: "#fff",
   },
   placeholder: {
     width: 40,
   },
   searchContainer: {
     padding: 16,
-    backgroundColor: "#fff",
+    backgroundColor: "#111111",
     borderBottomWidth: 1,
-    borderBottomColor: "#f0f0f0",
+    borderBottomColor: "#222222",
   },
   searchInputContainer: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#222222",
     borderRadius: 12,
     paddingHorizontal: 12,
     height: 46,
   },
   searchIcon: {
     marginRight: 8,
+    color: "#FF0000",
   },
   searchInput: {
     flex: 1,
@@ -216,7 +217,7 @@ const styles = StyleSheet.create({
   userItem: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#fff",
+    backgroundColor: "#111111",
     borderRadius: 12,
     padding: 16,
     marginBottom: 12,
@@ -230,7 +231,7 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 25,
-    backgroundColor: "#34D399",
+    backgroundColor: "#FF0000",
     justifyContent: "center",
     alignItems: "center",
     marginRight: 16,
@@ -246,12 +247,12 @@ const styles = StyleSheet.create({
   userName: {
     fontSize: 16,
     fontWeight: "600",
-    color: "#333",
+    color: "#fff",
     marginBottom: 4,
   },
   userEmail: {
     fontSize: 14,
-    color: "#666",
+    color: "#aaa",
     marginBottom: 8,
   },
   userMeta: {
@@ -273,7 +274,7 @@ const styles = StyleSheet.create({
   roleBadgeText: {
     fontSize: 12,
     fontWeight: "500",
-    color: "#34D399",
+    color: "#FF0000",
   },
   emptyContainer: {
     alignItems: "center",

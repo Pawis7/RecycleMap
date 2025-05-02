@@ -212,7 +212,7 @@ export const MainScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
+      <StatusBar barStyle="light-content" backgroundColor="#111111" />
 
       {/* Header personalizado */}
       <View style={styles.header}>
@@ -220,19 +220,19 @@ export const MainScreen = ({ navigation }) => {
           <View style={styles.headerLeft}>
             <Text style={styles.greeting}>Hola, {userName}</Text>
             <View style={styles.locationContainer}>
-              <MaterialCommunityIcons name="map-marker" size={16} color="#34D399" />
+              <MaterialCommunityIcons name="map-marker" size={16} color="#FF0000" />
               <Text style={styles.location}>CUCEI, UdeG</Text>
             </View>
           </View>
           <TouchableOpacity style={styles.searchButton} onPress={handleOpenSearch}>
-            <MaterialCommunityIcons name="magnify" size={22} color="#333" />
+            <MaterialCommunityIcons name="magnify" size={22} color="#ff0000" />
           </TouchableOpacity>
         </View>
       </View>
 
       <ScrollView
         showsVerticalScrollIndicator={false}
-        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} colors={["#34D399"]} />}
+        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} colors={["#FF0000"]} />}
       >
         {/* Mapa con zoom por pellizco */}
         <View style={styles.mapContainer}>
@@ -245,7 +245,7 @@ export const MainScreen = ({ navigation }) => {
         </View>
 
         {loading ? (
-          <ActivityIndicator size="large" color="#34D399" style={styles.loader} />
+          <ActivityIndicator size="large" color="#FF0000" style={styles.loader} />
         ) : (
           <View>
             <ScrollView
@@ -332,7 +332,7 @@ export const MainScreen = ({ navigation }) => {
         </View>
 
         {loading ? (
-          <ActivityIndicator size="large" color="#34D399" style={styles.loader} />
+          <ActivityIndicator size="large" color="#FF0000" style={styles.loader} />
         ) : (
           <FlatList
             data={filterArticlesByCategory()}
@@ -365,10 +365,10 @@ export const MainScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "#000000", // Fondo negro
   },
   header: {
-    backgroundColor: "#ffffff",
+    backgroundColor: "#111111", // Fondo negro
     paddingTop: 10,
     paddingBottom: 15,
     paddingHorizontal: 20,
@@ -391,7 +391,7 @@ const styles = StyleSheet.create({
   greeting: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#333",
+    color: "#ffffff", // Texto blanco
     marginBottom: 4,
   },
   locationContainer: {
@@ -400,14 +400,14 @@ const styles = StyleSheet.create({
   },
   location: {
     fontSize: 14,
-    color: "#666",
+    color: "#FF0000", // Texto rojo
     marginLeft: 4,
   },
   searchButton: {
     width: 44,
     height: 44,
     borderRadius: 22,
-    backgroundColor: "#f0f0f0",
+    backgroundColor: "rgba(211, 52, 52, 0.2)",
     justifyContent: "center",
     alignItems: "center",
     shadowColor: "#000",
@@ -427,7 +427,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 4,
-    backgroundColor: "#fff",
+    backgroundColor: "#111111", // Fondo negro
   },
   sectionHeader: {
     flexDirection: "row",
@@ -439,11 +439,11 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#333",
+    color: "#ffffff", // Texto blanco
   },
   seeAllText: {
     fontSize: 14,
-    color: "#34D399",
+    color: "#FF0000", // Texto rojo
     fontWeight: "600",
   },
   featuredCard: {
@@ -478,7 +478,7 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   featuredCategoryContainer: {
-    backgroundColor: "#34D399",
+    backgroundColor: "#FF0000", // Fondo rojo
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 4,
@@ -501,7 +501,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   featuredMetaText: {
-    color: "#fff",
+    color: "#fff", // Texto blanco
     fontSize: 12,
     marginLeft: 4,
   },
@@ -526,28 +526,28 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 8,
     borderRadius: 20,
-    backgroundColor: "#f0f0f0",
+    backgroundColor: "#222222", // Fondo oscuro
     borderWidth: 1,
     borderColor: "#e0e0e0",
   },
   categoryButtonActive: {
-    backgroundColor: "#34D399",
-    borderColor: "#34D399",
+    backgroundColor: "#FF0000", // Fondo rojo
+    borderColor: "#FF0000",
   },
   categoryButtonText: {
     fontSize: 14,
-    color: "#666",
+    color: "#aaaaaa", // Texto gris claro
     fontWeight: "500",
   },
   categoryButtonTextActive: {
-    color: "#fff",
+    color: "#ffffff", // Texto blanco
     fontWeight: "600",
   },
   gridItem: {
     width: (width - 60) / 2,
     marginBottom: 20,
     borderRadius: 16,
-    backgroundColor: "#fff",
+    backgroundColor: "#111111", // Fondo negro
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
@@ -582,7 +582,7 @@ const styles = StyleSheet.create({
     padding: 12,
   },
   gridCategoryContainer: {
-    backgroundColor: "rgba(52, 211, 153, 0.1)",
+    backgroundColor: "rgba(255, 0, 0, 0.1)",
     paddingHorizontal: 8,
     paddingVertical: 3,
     borderRadius: 4,
@@ -590,14 +590,14 @@ const styles = StyleSheet.create({
     marginBottom: 6,
   },
   gridCategory: {
-    color: "#34D399",
+    color: "#FF0000", // Texto rojo
     fontSize: 10,
     fontWeight: "600",
   },
   gridTitle: {
     fontSize: 14,
     fontWeight: "600",
-    color: "#333",
+    color: "#ffffff", // Texto blanco
     marginBottom: 4,
     lineHeight: 18,
   },
@@ -607,7 +607,7 @@ const styles = StyleSheet.create({
   },
   gridMetaText: {
     fontSize: 12,
-    color: "#999",
+    color: "#aaaaaa", // Texto gris claro
     marginLeft: 4,
   },
   loader: {

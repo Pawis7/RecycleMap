@@ -104,7 +104,7 @@ export default function SettingsScreen() {
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#34D399" />
+        <ActivityIndicator size="large" color="#FF0000" />
       </View>
     )
   }
@@ -128,7 +128,7 @@ export default function SettingsScreen() {
             onPress={e => e.stopPropagation()}
           >
             <View style={styles.modalHeader}>
-              <MaterialCommunityIcons name="shield-lock-outline" size={32} color="#34D399" />
+              <MaterialCommunityIcons name="shield-lock-outline" size={32} color="#FF0000" />
               <Text style={styles.modalTitle}>Verificación de Seguridad</Text>
             </View>
             
@@ -195,19 +195,19 @@ export default function SettingsScreen() {
           <Text style={styles.sectionTitle}>Mi Cuenta</Text>
 
           <TouchableOpacity style={styles.settingItem} onPress={() => verifyPasswordBeforeNavigation("EditProfile")}>
-            <MaterialCommunityIcons name="account-outline" size={24} color="#34D399" />
+            <MaterialCommunityIcons name="account-outline" size={24} color="#FF0000" />
             <Text style={styles.settingText}>Editar perfil</Text>
             <MaterialCommunityIcons name="chevron-right" size={24} color="#ccc" />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.settingItem} onPress={() => navigateTo("ChangePassword")}>
-            <MaterialCommunityIcons name="lock-outline" size={24} color="#34D399" />
+            <MaterialCommunityIcons name="lock-outline" size={24} color="#FF0000" />
             <Text style={styles.settingText}>Cambiar contraseña</Text>
             <MaterialCommunityIcons name="chevron-right" size={24} color="#ccc" />
           </TouchableOpacity>
 
          {/* <TouchableOpacity style={styles.settingItem} onPress={() => navigateTo("Notifications")}>
-            <MaterialCommunityIcons name="bell-outline" size={24} color="#34D399" />
+            <MaterialCommunityIcons name="bell-outline" size={24} color="#FF0000" />
             <Text style={styles.settingText}>Notificaciones</Text>
             <MaterialCommunityIcons name="chevron-right" size={24} color="#ccc" />
           </TouchableOpacity> */}
@@ -219,14 +219,14 @@ export default function SettingsScreen() {
             <Text style={styles.sectionTitle}>Opciones de Administrador</Text>
 
             <TouchableOpacity style={styles.settingItem} onPress={() => navigateTo("ManageUsers")}>
-              <MaterialCommunityIcons name="account-cog-outline" size={24} color="#34D399" />
+              <MaterialCommunityIcons name="account-cog-outline" size={24} color="#FF0000" />
               <Text style={styles.settingText}>Gestionar Usuarios</Text>
               <MaterialCommunityIcons name="chevron-right" size={24} color="#ccc" />
             </TouchableOpacity>
 
             {/* Updated navigation target */}
             <TouchableOpacity style={styles.settingItem} onPress={() => navigateTo("ManageArticles")}>
-              <MaterialCommunityIcons name="file-document-edit-outline" size={24} color="#34D399" />
+              <MaterialCommunityIcons name="file-document-edit-outline" size={24} color="#FF0000" />
               <Text style={styles.settingText}>Crear Artículos</Text>
               <MaterialCommunityIcons name="chevron-right" size={24} color="#ccc" />
             </TouchableOpacity>
@@ -239,19 +239,19 @@ export default function SettingsScreen() {
 
           {/* Corrected navigation target for "Acerca de" if it was wrong */}
           <TouchableOpacity style={styles.settingItem} onPress={() => navigateTo("About")}> 
-            <MaterialCommunityIcons name="information-outline" size={24} color="#34D399" />
+            <MaterialCommunityIcons name="information-outline" size={24} color="#FF0000" />
             <Text style={styles.settingText}>Acerca de</Text>
             <MaterialCommunityIcons name="chevron-right" size={24} color="#ccc" />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.settingItem} onPress={() => navigateTo("Help")}>
-            <MaterialCommunityIcons name="help-circle-outline" size={24} color="#34D399" />
+            <MaterialCommunityIcons name="help-circle-outline" size={24} color="#FF0000" />
             <Text style={styles.settingText}>Ayuda</Text>
             <MaterialCommunityIcons name="chevron-right" size={24} color="#ccc" />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.settingItem} onPress={() => navigateTo("PrivacyPolicy")}>
-            <MaterialCommunityIcons name="shield-check-outline" size={24} color="#34D399" />
+            <MaterialCommunityIcons name="shield-check-outline" size={24} color="#FF0000" />
             <Text style={styles.settingText}>Política de privacidad</Text>
             <MaterialCommunityIcons name="chevron-right" size={24} color="#ccc" />
           </TouchableOpacity>
@@ -274,7 +274,7 @@ export default function SettingsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "#000000",
     paddingTop: 20,
   },
   headerGradient: {
@@ -287,7 +287,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "#000000",
   },
   scrollContainer: {
     flex: 1,
@@ -296,7 +296,7 @@ const styles = StyleSheet.create({
   profileSection: {
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#111111',
     borderRadius: 12,
     margin: 16,
     marginBottom: 8,
@@ -315,17 +315,17 @@ const styles = StyleSheet.create({
     height: 80,
     borderRadius: 40,
     borderWidth: 3,
-    borderColor: '#34D399',
+    borderColor: '#FF0000',
   },
   userName: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#333',
+    color: '#fff',
     marginTop: 5,
   },
   userEmail: {
     fontSize: 14,
-    color: '#666',
+    color: '#aaa',
     marginTop: 2,
   },
   statsContainer: {
@@ -356,7 +356,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255, 255, 255, 0.3)",
   },
   section: {
-    backgroundColor: "#ffffff",
+    backgroundColor: "#111111",
     borderRadius: 16,
     padding: 16,
     margin: 16,
@@ -372,24 +372,24 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 16,
-    color: "#333",
+    color: "#fff",
   },
   settingItem: {
     flexDirection: "row",
     alignItems: "center",
     paddingVertical: 14,
     borderBottomWidth: 1,
-    borderBottomColor: "#f0f0f0",
+    borderBottomColor: "#222222",
   },
   settingText: {
     flex: 1,
     fontSize: 16,
     marginLeft: 16,
-    color: "#333",
+    color: "#fff",
   },
   logoutButton: {
     flexDirection: "row",
-    backgroundColor: "#f44336",
+    backgroundColor: "#FF0000",
     borderRadius: 12,
     padding: 16,
     margin: 16,
@@ -415,18 +415,18 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   versionText: {
-    color: "#999",
+    color: "#666",
     fontSize: 12,
   },
   modalOverlay: {
     flex: 1,
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    backgroundColor: "rgba(0, 0, 0, 0.7)",
     justifyContent: "center",
     alignItems: "center",
   },
   modalContent: {
     width: "85%",
-    backgroundColor: "white",
+    backgroundColor: "#111111",
     borderRadius: 16,
     padding: 24,
     alignItems: "center",
@@ -446,12 +446,12 @@ const styles = StyleSheet.create({
   modalTitle: {
     fontSize: 20,
     fontWeight: "700",
-    color: "#333",
+    color: "#fff",
     marginTop: 12,
   },
   modalSubtitle: {
     fontSize: 14,
-    color: "#666",
+    color: "#aaa",
     textAlign: "center",
     marginBottom: 24,
   },
@@ -461,7 +461,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 50,
     borderWidth: 1,
-    borderColor: "#ddd",
+    borderColor: "#333",
     borderRadius: 8,
     paddingHorizontal: 12,
     marginBottom: 24,
@@ -470,7 +470,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginLeft: 8,
     fontSize: 16,
-    color: "#333",
+    color: "#fff",
   },
   modalButtons: {
     flexDirection: "row",
@@ -486,13 +486,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   cancelButton: {
-    backgroundColor: "#f1f5f9",
+    backgroundColor: "#222222",
   },
   confirmButton: {
-    backgroundColor: "#34D399",
+    backgroundColor: "#FF0000",
   },
   cancelButtonText: {
-    color: "#64748b",
+    color: "#aaa",
     fontSize: 16,
     fontWeight: "600",
   },

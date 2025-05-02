@@ -16,16 +16,16 @@ export default function PrivacyPolicy() {
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-          <MaterialCommunityIcons name="arrow-left" size={24} color="#333" />
+          <MaterialCommunityIcons name="arrow-left" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Política de Privacidad</Text>
         <View style={styles.placeholder} />
       </View>
 
       <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
-        <LinearGradient colors={["rgba(52, 211, 153, 0.2)", "rgba(52, 211, 153, 0.05)"]} style={styles.headerGradient}>
+        <LinearGradient colors={["rgba(211, 52, 60, 0.2)", "rgba(211, 52, 52, 0.05)"]} style={styles.headerGradient}>
           <View style={styles.headerContent}>
-            <MaterialCommunityIcons name="shield-check" size={48} color="#34D399" style={styles.headerIcon} />
+            <MaterialCommunityIcons name="shield-check" size={48} color="#FF0000" style={styles.headerIcon} />
             <Text style={styles.headerText}>Tu privacidad es importante para nosotros</Text>
             <Text style={styles.lastUpdated}>Última actualización: 30 de Abril de 2025</Text>
           </View>
@@ -34,7 +34,7 @@ export default function PrivacyPolicy() {
         <View style={styles.content}>
           <View style={styles.section}>
             <View style={styles.sectionHeader}>
-              <MaterialCommunityIcons name="information-outline" size={24} color="#34D399" style={styles.sectionIcon} />
+              <MaterialCommunityIcons name="information-outline" size={24} color="#FF0000" style={styles.sectionIcon} />
               <Text style={styles.sectionTitle}>1. Introducción</Text>
             </View>
             <Text style={styles.paragraph}>
@@ -46,7 +46,7 @@ export default function PrivacyPolicy() {
 
           <View style={styles.section}>
             <View style={styles.sectionHeader}>
-              <MaterialCommunityIcons name="database" size={24} color="#34D399" style={styles.sectionIcon} />
+              <MaterialCommunityIcons name="database" size={24} color="#FF0000" style={styles.sectionIcon} />
               <Text style={styles.sectionTitle}>2. Información que Recopilamos</Text>
             </View>
             <Text style={styles.paragraph}>
@@ -54,7 +54,7 @@ export default function PrivacyPolicy() {
               la Aplicación incluye:
             </Text>
             <View style={styles.bulletPoint}>
-              <MaterialCommunityIcons name="circle-small" size={24} color="#34D399" />
+              <MaterialCommunityIcons name="circle-small" size={24} color="#FF0000" />
               <Text style={styles.bulletText}>
                 <Text style={styles.bold}>Datos Personales:</Text> Información de identificación personal, como tu
                 nombre, dirección de correo electrónico, que nos proporcionas voluntariamente cuando te registras en la
@@ -62,7 +62,7 @@ export default function PrivacyPolicy() {
               </Text>
             </View>
             <View style={styles.bulletPoint}>
-              <MaterialCommunityIcons name="circle-small" size={24} color="#34D399" />
+              <MaterialCommunityIcons name="circle-small" size={24} color="#FF0000" />
               <Text style={styles.bulletText}>
                 <Text style={styles.bold}>Datos de Uso:</Text> Información que nuestra aplicación recopila
                 automáticamente cuando accedes y utilizas la Aplicación, como tus acciones dentro de la app (artículos
@@ -73,7 +73,7 @@ export default function PrivacyPolicy() {
 
           <View style={styles.section}>
             <View style={styles.sectionHeader}>
-              <MaterialCommunityIcons name="clipboard-text" size={24} color="#34D399" style={styles.sectionIcon} />
+              <MaterialCommunityIcons name="clipboard-text" size={24} color="#FF0000" style={styles.sectionIcon} />
               <Text style={styles.sectionTitle}>3. Uso de tu Información</Text>
             </View>
             <Text style={styles.paragraph}>
@@ -82,22 +82,22 @@ export default function PrivacyPolicy() {
               para:
             </Text>
             <View style={styles.bulletPoint}>
-              <MaterialCommunityIcons name="check" size={20} color="#34D399" />
+              <MaterialCommunityIcons name="check" size={20} color="#FF0000" />
               <Text style={styles.bulletText}>Crear y gestionar tu cuenta.</Text>
             </View>
             <View style={styles.bulletPoint}>
-              <MaterialCommunityIcons name="check" size={20} color="#34D399" />
+              <MaterialCommunityIcons name="check" size={20} color="#FF0000" />
               <Text style={styles.bulletText}>Enviarte correos electrónicos administrativos.</Text>
             </View>
             <View style={styles.bulletPoint}>
-              <MaterialCommunityIcons name="check" size={20} color="#34D399" />
+              <MaterialCommunityIcons name="check" size={20} color="#FF0000" />
               <Text style={styles.bulletText}>Mejorar la eficiencia y el funcionamiento de la Aplicación.</Text>
             </View>
           </View>
 
           <View style={styles.section}>
             <View style={styles.sectionHeader}>
-              <MaterialCommunityIcons name="share-variant" size={24} color="#34D399" style={styles.sectionIcon} />
+              <MaterialCommunityIcons name="share-variant" size={24} color="#FF0000" style={styles.sectionIcon} />
               <Text style={styles.sectionTitle}>4. Divulgación de tu Información</Text>
             </View>
             <Text style={styles.paragraph}>
@@ -105,14 +105,14 @@ export default function PrivacyPolicy() {
               ser divulgada de la siguiente manera:
             </Text>
             <View style={styles.bulletPoint}>
-              <MaterialCommunityIcons name="circle-small" size={24} color="#34D399" />
+              <MaterialCommunityIcons name="circle-small" size={24} color="#FF0000" />
               <Text style={styles.bulletText}>
                 <Text style={styles.bold}>Cumplimiento Legal:</Text> Podemos divulgar tu información cuando sea
                 requerido por ley o en respuesta a solicitudes legales válidas.
               </Text>
             </View>
             <View style={styles.bulletPoint}>
-              <MaterialCommunityIcons name="circle-small" size={24} color="#34D399" />
+              <MaterialCommunityIcons name="circle-small" size={24} color="#FF0000" />
               <Text style={styles.bulletText}>
                 <Text style={styles.bold}>Terceros Proveedores de Servicios:</Text> Podemos compartir tu información con
                 terceros que realizan servicios para nosotros o en nuestro nombre.
@@ -122,7 +122,7 @@ export default function PrivacyPolicy() {
 
           <View style={styles.section}>
             <View style={styles.sectionHeader}>
-              <MaterialCommunityIcons name="shield-lock" size={24} color="#34D399" style={styles.sectionIcon} />
+              <MaterialCommunityIcons name="shield-lock" size={24} color="#FF0000" style={styles.sectionIcon} />
               <Text style={styles.sectionTitle}>5. Seguridad de tu Información</Text>
             </View>
             <Text style={styles.paragraph}>
@@ -136,7 +136,7 @@ export default function PrivacyPolicy() {
 
           <View style={styles.section}>
             <View style={styles.sectionHeader}>
-              <MaterialCommunityIcons name="account-check" size={24} color="#34D399" style={styles.sectionIcon} />
+              <MaterialCommunityIcons name="account-check" size={24} color="#FF0000" style={styles.sectionIcon} />
               <Text style={styles.sectionTitle}>6. Tus Derechos de Privacidad</Text>
             </View>
             <Text style={styles.paragraph}>
@@ -147,7 +147,7 @@ export default function PrivacyPolicy() {
           
           <View style={styles.section}>
             <View style={styles.sectionHeader}>
-              <MaterialCommunityIcons name="copyright" size={24} color="#34D399" style={styles.sectionIcon} />
+              <MaterialCommunityIcons name="copyright" size={24} color="#FF0000" style={styles.sectionIcon} />
               <Text style={styles.sectionTitle}>7. Imagenes y derechos de autor</Text>
             </View>
             <Text style={styles.paragraph}>
@@ -159,7 +159,7 @@ export default function PrivacyPolicy() {
 
           <View style={styles.section}>
             <View style={styles.sectionHeader}>
-              <MaterialCommunityIcons name="email" size={24} color="#34D399" style={styles.sectionIcon} />
+              <MaterialCommunityIcons name="email" size={24} color="#FF0000" style={styles.sectionIcon} />
               <Text style={styles.sectionTitle}>8. Contacto</Text>
             </View>
             <Text style={styles.paragraph}>
@@ -184,7 +184,7 @@ export default function PrivacyPolicy() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "#000000",
   },
   header: {
     flexDirection: "row",
@@ -192,9 +192,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingHorizontal: 16,
     paddingVertical: 16,
-    backgroundColor: "#fff",
+    backgroundColor: "#111111",
     borderBottomWidth: 1,
-    borderBottomColor: "#f0f0f0",
+    borderBottomColor: "#222222",
   },
   backButton: {
     padding: 8,
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#333",
+    color: "#fff",
     textAlign: "center",
     flex: 1,
     marginHorizontal: 5,
@@ -218,6 +218,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
+    backgroundColor: "#111111",
   },
   headerContent: {
     alignItems: "center",
@@ -228,13 +229,13 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 22,
     fontWeight: "bold",
-    color: "#333",
+    color: "#fff",
     textAlign: "center",
     marginBottom: 8,
   },
   lastUpdated: {
     fontSize: 14,
-    color: "#666",
+    color: "#aaa",
     fontStyle: "italic",
   },
   content: {
@@ -242,7 +243,7 @@ const styles = StyleSheet.create({
   },
   section: {
     marginBottom: 24,
-    backgroundColor: "#fff",
+    backgroundColor: "#111111",
     borderRadius: 12,
     padding: 16,
     shadowColor: "#000",
@@ -262,11 +263,11 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#333",
+    color: "#fff",
   },
   paragraph: {
     fontSize: 15,
-    color: "#444",
+    color: "#ccc",
     lineHeight: 22,
     marginBottom: 12,
     textAlign: "justify",
@@ -280,7 +281,7 @@ const styles = StyleSheet.create({
   bulletText: {
     flex: 1,
     fontSize: 15,
-    color: "#444",
+    color: "#ccc",
     lineHeight: 22,
   },
   bold: {
@@ -288,7 +289,7 @@ const styles = StyleSheet.create({
   },
   contactButton: {
     flexDirection: "row",
-    backgroundColor: "#34D399",
+    backgroundColor: "#FF0000",
     borderRadius: 8,
     paddingVertical: 12,
     paddingHorizontal: 16,

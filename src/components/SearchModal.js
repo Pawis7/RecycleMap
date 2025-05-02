@@ -275,20 +275,20 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: "#fff",
+    backgroundColor: "rgba(0, 0, 0, 0.8)", // Dark overlay
     zIndex: 1000,
   },
   modalContainer: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#111111", // Dark background
   },
   safeArea: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#111111", // Dark background
   },
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#111111", // Dark background
   },
   header: {
     flexDirection: "row",
@@ -296,7 +296,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 12,
     borderBottomWidth: 1,
-    borderBottomColor: "#f0f0f0",
+    borderBottomColor: "#222222", // Dark border
   },
   backButton: {
     padding: 10,
@@ -306,18 +306,19 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#222222", // Dark input background
     borderRadius: 8,
     paddingHorizontal: 12,
     height: 40,
   },
   searchIcon: {
     marginRight: 8,
+    color: "#999", // Light gray icon
   },
   searchInput: {
     flex: 1,
     fontSize: 16,
-    color: "#333",
+    color: "#fff", // White text
     height: 40,
   },
   clearButton: {
@@ -334,7 +335,7 @@ const styles = StyleSheet.create({
   loadingText: {
     marginTop: 12,
     fontSize: 16,
-    color: "#666",
+    color: "#999", // Light gray text
   },
   emptyStateContainer: {
     flex: 1,
@@ -349,7 +350,7 @@ const styles = StyleSheet.create({
   initialStateText: {
     marginTop: 16,
     fontSize: 16,
-    color: "#666",
+    color: "#999", // Light gray text
     textAlign: "center",
     lineHeight: 22,
   },
@@ -363,13 +364,13 @@ const styles = StyleSheet.create({
     marginTop: 16,
     fontSize: 16,
     fontWeight: "500",
-    color: "#333",
+    color: "#fff", // White text
     textAlign: "center",
   },
   noResultsSubtext: {
     marginTop: 8,
     fontSize: 14,
-    color: "#666",
+    color: "#999", // Light gray text
     textAlign: "center",
   },
   resultsList: {
@@ -378,16 +379,16 @@ const styles = StyleSheet.create({
   resultItem: {
     flexDirection: "row",
     marginBottom: 16,
-    backgroundColor: "#fff",
+    backgroundColor: "#222222", // Dark card background
     borderRadius: 8,
     overflow: "hidden",
     borderWidth: 1,
-    borderColor: "#f0f0f0",
+    borderColor: "#333333", // Dark border
   },
   resultImageContainer: {
     width: 80,
     height: 80,
-    backgroundColor: "#f0f0f0",
+    backgroundColor: "#333333", // Dark placeholder
   },
   resultImage: {
     width: "100%",
@@ -399,18 +400,18 @@ const styles = StyleSheet.create({
   },
   resultCategory: {
     fontSize: 12,
-    color: "#34D399",
+    color: "#34D399", // Green text
     marginBottom: 4,
   },
   resultTitle: {
     fontSize: 16,
     fontWeight: "500",
-    color: "#333",
+    color: "#fff", // White text
     marginBottom: 4,
   },
   resultDescription: {
     fontSize: 14,
-    color: "#666",
+    color: "#999", // Light gray text
     lineHeight: 18,
   },
   recentSearchesContainer: {
@@ -425,22 +426,22 @@ const styles = StyleSheet.create({
   recentSearchesTitle: {
     fontSize: 16,
     fontWeight: "500",
-    color: "#333",
+    color: "#fff", // White text
   },
   clearAllText: {
     fontSize: 14,
-    color: "#34D399",
+    color: "#34D399", // Green text
   },
   recentSearchItem: {
     flexDirection: "row",
     alignItems: "center",
     paddingVertical: 12,
     borderBottomWidth: 1,
-    borderBottomColor: "#f0f0f0",
+    borderBottomColor: "#333333", // Dark border
   },
   recentSearchText: {
     fontSize: 16,
-    color: "#333",
+    color: "#fff", // White text
     marginLeft: 12,
   },
 })

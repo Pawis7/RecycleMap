@@ -13,7 +13,7 @@ export default function About() {
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-          <MaterialCommunityIcons name="arrow-left" size={24} color="#333" />
+          <MaterialCommunityIcons name="arrow-left" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Acerca de</Text>
         <View style={styles.placeholder} />
@@ -42,7 +42,7 @@ export default function About() {
           <Text style={styles.sectionTitle}>Características principales</Text>
           <View style={styles.featureCard}>
             <View style={styles.featureIconContainer}>
-              <MaterialCommunityIcons name="map-marker" size={24} color="#34D399" />
+              <MaterialCommunityIcons name="map-marker" size={24} color="#FF0000" />
             </View>
             <View style={styles.featureContent}>
               <Text style={styles.featureTitle}>Mapa Interactivo</Text>
@@ -54,7 +54,7 @@ export default function About() {
 
           <View style={styles.featureCard}>
             <View style={styles.featureIconContainer}>
-              <MaterialCommunityIcons name="newspaper-variant" size={24} color="#34D399" />
+              <MaterialCommunityIcons name="newspaper-variant" size={24} color="#FF0000" />
             </View>
             <View style={styles.featureContent}>
               <Text style={styles.featureTitle}>Artículos Informativos</Text>
@@ -66,7 +66,7 @@ export default function About() {
 
           <View style={styles.featureCard}>
             <View style={styles.featureIconContainer}>
-              <MaterialCommunityIcons name="account-group" size={24} color="#34D399" />
+              <MaterialCommunityIcons name="account-group" size={24} color="#FF0000" />
             </View>
             <View style={styles.featureContent}>
               <Text style={styles.featureTitle}>Comunidad</Text>
@@ -96,7 +96,7 @@ export default function About() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "#000000",
   },
   header: {
     flexDirection: "row",
@@ -104,9 +104,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingHorizontal: 16,
     paddingVertical: 16,
-    backgroundColor: "#fff",
+    backgroundColor: "#111111",
     borderBottomWidth: 1,
-    borderBottomColor: "#f0f0f0",
+    borderBottomColor: "#222222",
   },
   backButton: {
     padding: 8,
@@ -114,9 +114,10 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#333",
+    color: "#fff",
     textAlign: "center",
     flex: 1,
+    marginHorizontal: 5,
   },
   placeholder: {
     width: 40,
@@ -138,18 +139,18 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: "bold",
-    color: "#333",
+    color: "#fff",
     textAlign: "center",
     marginBottom: 8,
   },
   version: {
     fontSize: 14,
-    color: "#666",
+    color: "#ccc",
     textAlign: "center",
     marginBottom: 24,
   },
   card: {
-    backgroundColor: "#fff",
+    backgroundColor: "#111111",
     borderRadius: 12,
     padding: 16,
     marginBottom: 24,
@@ -160,22 +161,22 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   description: {
-    fontSize: 16,
-    color: "#444",
-    lineHeight: 24,
-    marginBottom: 16,
-    
+    fontSize: 15,
+    color: "#ccc",
+    lineHeight: 22,
+    marginBottom: 12,
+    textAlign: "justify",
   },
   sectionTitle: {
     fontSize: 18,
-    fontWeight: "600",
-    color: "#333",
+    fontWeight: "bold",
+    color: "#fff",
     marginTop: 8,
     marginBottom: 16,
   },
   featureCard: {
     flexDirection: "row",
-    backgroundColor: "#fff",
+    backgroundColor: "#111111",
     borderRadius: 12,
     padding: 16,
     marginBottom: 12,
@@ -189,7 +190,7 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: "rgba(52, 211, 153, 0.1)",
+    backgroundColor: "rgba(211, 52, 78, 0.1)",
     justifyContent: "center",
     alignItems: "center",
     marginRight: 16,
@@ -200,16 +201,16 @@ const styles = StyleSheet.create({
   featureTitle: {
     fontSize: 16,
     fontWeight: "600",
-    color: "#333",
+    color: "#fff",
     marginBottom: 4,
   },
   featureDescription: {
     fontSize: 14,
-    color: "#666",
+    color: "#ccc",
     lineHeight: 20,
   },
   developerCard: {
-    backgroundColor: "#fff",
+    backgroundColor: "#111111",
     borderRadius: 12,
     padding: 16,
     marginBottom: 24,
@@ -224,18 +225,18 @@ const styles = StyleSheet.create({
   developer: {
     fontSize: 18,
     fontWeight: "600",
-    color: "#333",
+    color: "#fff",
     marginBottom: 4,
     textAlign: "center",
   },
   developerRole: {
     fontSize: 14,
-    color: "#666",
+    color: "#ccc",
     marginBottom: 16,
   },
   websiteButton: {
     flexDirection: "row",
-    backgroundColor: "#34D399",
+    backgroundColor: "#FF0000",
     borderRadius: 8,
     paddingHorizontal: 16,
     paddingVertical: 8,
@@ -248,7 +249,7 @@ const styles = StyleSheet.create({
   },
   copyright: {
     fontSize: 12,
-    color: "#999",
+    color: "#666",
     textAlign: "center",
     marginTop: 16,
     marginBottom: 8,

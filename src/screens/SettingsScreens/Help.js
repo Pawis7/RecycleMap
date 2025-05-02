@@ -101,7 +101,7 @@ export default function Help() {
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-          <MaterialCommunityIcons name="arrow-left" size={24} color="#333" />
+          <MaterialCommunityIcons name="arrow-left" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Ayuda</Text>
         <View style={styles.placeholder} />
@@ -123,7 +123,7 @@ export default function Help() {
                 <MaterialCommunityIcons
                   name={expandedFaq === index ? "chevron-up" : "chevron-down"}
                   size={24}
-                  color="#34D399"
+                  color="#ffffff"
                 />
               </View>
               {expandedFaq === index && <Text style={styles.faqAnswer}>{faq.answer}</Text>}
@@ -140,7 +140,7 @@ export default function Help() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "#000000",
   },
   header: {
     flexDirection: "row",
@@ -148,9 +148,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingHorizontal: 16,
     paddingVertical: 16,
-    backgroundColor: "#fff",
+    backgroundColor: "#111111",
     borderBottomWidth: 1,
-    borderBottomColor: "#f0f0f0",
+    borderBottomColor: "#222222",
   },
   backButton: {
     padding: 8,
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#333",
+    color: "#fff",
     textAlign: "center",
     flex: 1,
   },
@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
   },
   faqItem: {
     marginBottom: 12,
-    backgroundColor: "#fff",
+    backgroundColor: "#111111",
     padding: 16,
     borderRadius: 12,
     shadowColor: "#000",
@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
     elevation: 1,
   },
   faqItemExpanded: {
-    backgroundColor: "rgba(52, 211, 153, 0.05)",
+    backgroundColor: "rgba(255, 0, 0, 0.1)",
   },
   faqHeader: {
     flexDirection: "row",
@@ -200,13 +200,13 @@ const styles = StyleSheet.create({
   faqQuestion: {
     fontSize: 16,
     fontWeight: "600",
-    color: "#333",
+    color: "#fff",
     flex: 1,
     marginRight: 8,
   },
   faqAnswer: {
     fontSize: 15,
-    color: "#555",
+    color: "#ddd",
     lineHeight: 22,
     marginTop: 12,
     paddingTop: 12,
@@ -237,7 +237,7 @@ const styles = StyleSheet.create({
   },
   contactLink: {
     fontSize: 16,
-    color: "#34D399",
+    color: "#FF0000",
     fontWeight: "500",
     marginLeft: 12,
   },
@@ -284,7 +284,7 @@ const styles = StyleSheet.create({
   },
   sendButton: {
     flexDirection: "row",
-    backgroundColor: "#34D399",
+    backgroundColor: "#FF0000",
     borderRadius: 8,
     paddingVertical: 12,
     paddingHorizontal: 16,
@@ -297,5 +297,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "600",
     marginLeft: 8,
+  },
+  featureIconContainer: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: "rgba(255, 0, 0, 0.1)",
+    justifyContent: "center",
+    alignItems: "center",
+    marginRight: 16,
   },
 })

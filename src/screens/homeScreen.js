@@ -137,9 +137,9 @@ const HomeScreen = ({ navigation }) => {
   return (
     
     <View style={styles.container}>
-      <StatusBar backgroundColor="#1e3a2f" barStyle="light-content" />
+      <StatusBar backgroundColor="#111111" barStyle="light-content" />
       <LinearGradient
-        colors={["#1e3a2f", "#2d5f41", "#34D399"]}
+        colors={["#000000", "#1a0000", "#FF0000"]}
         style={styles.backgroundGradient}
       />
       
@@ -299,7 +299,7 @@ const HomeScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#1e3a2f",
+    backgroundColor: "#000000",
   },
   backgroundGradient: {
     position: "absolute",
@@ -336,7 +336,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 20,
     borderRadius: width * 0.25,
-    backgroundColor: "rgba(255, 255, 255, 0.15)",
+    backgroundColor: "rgba(255, 0, 0, 0.15)",
     padding: 15,
   },
   logo: {
@@ -370,7 +370,7 @@ const styles = StyleSheet.create({
   },
   signupButton: {
     width: "100%",
-    backgroundColor: "#34D399",
+    backgroundColor: "#FF0000",
     borderRadius: 12,
     paddingVertical: 15,
     shadowColor: "#000",

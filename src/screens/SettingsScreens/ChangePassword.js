@@ -109,7 +109,7 @@ export default function ChangePassword() {
       <ScrollView style={styles.scrollContainer}>
         <View style={styles.header}>
           <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-            <MaterialCommunityIcons name="arrow-left" size={24} color="#333" />
+            <MaterialCommunityIcons name="arrow-left" size={24} color="#fff" />
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Cambiar Contraseña</Text>
           <View style={styles.placeholder} />
@@ -123,7 +123,7 @@ export default function ChangePassword() {
           <View style={styles.inputGroup}>
             <Text style={styles.inputLabel}>Contraseña actual</Text>
             <View style={[styles.inputContainer, errors.currentPassword ? styles.inputError : null]}>
-              <MaterialCommunityIcons name="lock-outline" size={20} color="#34D399" style={styles.inputIcon} />
+              <MaterialCommunityIcons name="lock-outline" size={20} color="#FF0000" style={styles.inputIcon} />
               <TextInput
                 style={styles.input}
                 value={currentPassword}
@@ -133,7 +133,7 @@ export default function ChangePassword() {
                 secureTextEntry={!showCurrentPassword}
               />
               <TouchableOpacity onPress={() => setShowCurrentPassword(!showCurrentPassword)}>
-                <MaterialCommunityIcons name={showCurrentPassword ? "eye-off" : "eye"} size={20} color="#999" />
+                <MaterialCommunityIcons name={showCurrentPassword ? "eye-off" : "eye"} size={20} color="#FF0000" />
               </TouchableOpacity>
             </View>
             {errors.currentPassword ? <Text style={styles.errorText}>{errors.currentPassword}</Text> : null}
@@ -142,7 +142,7 @@ export default function ChangePassword() {
           <View style={styles.inputGroup}>
             <Text style={styles.inputLabel}>Nueva contraseña</Text>
             <View style={[styles.inputContainer, errors.newPassword ? styles.inputError : null]}>
-              <MaterialCommunityIcons name="lock-outline" size={20} color="#34D399" style={styles.inputIcon} />
+              <MaterialCommunityIcons name="lock-outline" size={20} color="#FF0000" style={styles.inputIcon} />
               <TextInput
                 style={styles.input}
                 value={newPassword}
@@ -152,7 +152,7 @@ export default function ChangePassword() {
                 secureTextEntry={!showNewPassword}
               />
               <TouchableOpacity onPress={() => setShowNewPassword(!showNewPassword)}>
-                <MaterialCommunityIcons name={showNewPassword ? "eye-off" : "eye"} size={20} color="#999" />
+                <MaterialCommunityIcons name={showNewPassword ? "eye-off" : "eye"} size={20} color="#FF0000" />
               </TouchableOpacity>
             </View>
             {errors.newPassword ? <Text style={styles.errorText}>{errors.newPassword}</Text> : null}
@@ -161,7 +161,7 @@ export default function ChangePassword() {
           <View style={styles.inputGroup}>
             <Text style={styles.inputLabel}>Confirmar nueva contraseña</Text>
             <View style={[styles.inputContainer, errors.confirmPassword ? styles.inputError : null]}>
-              <MaterialCommunityIcons name="lock-check-outline" size={20} color="#34D399" style={styles.inputIcon} />
+              <MaterialCommunityIcons name="lock-check-outline" size={20} color="#FF0000" style={styles.inputIcon} />
               <TextInput
                 style={styles.input}
                 value={confirmPassword}
@@ -171,7 +171,7 @@ export default function ChangePassword() {
                 secureTextEntry={!showConfirmPassword}
               />
               <TouchableOpacity onPress={() => setShowConfirmPassword(!showConfirmPassword)}>
-                <MaterialCommunityIcons name={showConfirmPassword ? "eye-off" : "eye"} size={20} color="#999" />
+                <MaterialCommunityIcons name={showConfirmPassword ? "eye-off" : "eye"} size={20} color="#FF0000" />
               </TouchableOpacity>
             </View>
             {errors.confirmPassword ? <Text style={styles.errorText}>{errors.confirmPassword}</Text> : null}
@@ -196,7 +196,7 @@ export default function ChangePassword() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "#000000",
   },
   scrollContainer: {
     flex: 1,
@@ -207,9 +207,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingHorizontal: 16,
     paddingVertical: 16,
-    backgroundColor: "#fff",
+    backgroundColor: "#111111",
     borderBottomWidth: 1,
-    borderBottomColor: "#f0f0f0",
+    borderBottomColor: "#222222",
   },
   backButton: {
     padding: 8,
@@ -217,7 +217,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#333",
+    color: "#fff",
   },
   placeholder: {
     width: 40,
@@ -227,7 +227,7 @@ const styles = StyleSheet.create({
   },
   formDescription: {
     fontSize: 14,
-    color: "#666",
+    color: "#ddd",
     marginBottom: 20,
     lineHeight: 20,
   },
@@ -243,10 +243,10 @@ const styles = StyleSheet.create({
   inputContainer: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#fff",
+    backgroundColor: "#111111",
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: "#e0e0e0",
+    borderColor: "#333",
     height: 50,
     paddingHorizontal: 12,
   },
@@ -259,7 +259,7 @@ const styles = StyleSheet.create({
   input: {
     flex: 1,
     fontSize: 16,
-    color: "#333",
+    color: "#fff",
   },
   errorText: {
     fontSize: 12,
@@ -269,7 +269,7 @@ const styles = StyleSheet.create({
   },
   saveButton: {
     flexDirection: "row",
-    backgroundColor: "#34D399",
+    backgroundColor: "#FF0000",
     borderRadius: 12,
     padding: 16,
     margin: 16,

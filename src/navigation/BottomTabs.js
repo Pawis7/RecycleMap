@@ -57,7 +57,7 @@ function ChatbotButton() {
         onPress={() => alert("¡Chatbot activado! Aquí puedes implementar tu lógica de chatbot.")}
         activeOpacity={0.8}
       >
-        <LinearGradient colors={["#34D399", "#2d8a6b"]} style={styles.chatbotGradient}>
+        <LinearGradient colors={["#FF0000", "#ff0000"]} style={styles.chatbotGradient}>
           <MaterialCommunityIcons name="chat-processing" size={28} color="#fff" />
         </LinearGradient>
       </TouchableOpacity>
@@ -67,22 +67,23 @@ function ChatbotButton() {
 
 export default function BottomTabs() {
   return (
-    <View style={{ flex: 1 }}>
-      <StatusBar backgroundColor="#ffffff" barStyle="dark-content" />
+    <View style={{ flex: 1, backgroundColor: '#000000' }}>
+      <StatusBar backgroundColor="#000000" barStyle="light-content" />
 
       <Tab.Navigator
         screenOptions={({ route }) => ({
           headerStyle: {
-            backgroundColor: "#ffffff",
+            backgroundColor: "#111111",
             height: Platform.OS === "ios" ? 90 : 60,
             elevation: 0,
             shadowOpacity: 0,
             borderBottomWidth: 0,
           },
-          headerTintColor: "#333",
+          headerTintColor: "#fff",
           headerTitleStyle: {
             fontWeight: "600",
             fontSize: 18,
+            color: "#fff",
           },
           headerTitleAlign: "center",
           tabBarIcon: ({ color, size, focused }) => {
@@ -92,19 +93,18 @@ export default function BottomTabs() {
             } else if (route.name === "Configuración") {
               iconName = "cog"
             }
-            return <MaterialCommunityIcons name={iconName} size={24} color={focused ? "#34D399" : "#999"} />
+            return <MaterialCommunityIcons name={iconName} size={24} color={focused ? "#FF0000" : "#666"} />
           },
-          tabBarActiveTintColor: "#34D399",
-          tabBarInactiveTintColor: "#999",
+          tabBarActiveTintColor: "#FF0000",
+          tabBarInactiveTintColor: "#666",
           tabBarStyle: {
             height: Platform.OS === "ios" ? height * 0.1 : height * 0.08,
-            backgroundColor: "#ffffff",
-            borderTopWidth: 1,
-            borderTopColor: "#f0f0f0",
-            elevation: 8,
+            backgroundColor: "#111111",
+            borderTopWidth: 0,
+            elevation: 0,
             shadowColor: "#000",
             shadowOffset: { width: 0, height: -2 },
-            shadowOpacity: 0.05,
+            shadowOpacity: 0.1,
             shadowRadius: 3,
             paddingBottom: Platform.OS === "ios" ? 25 : 8,
             paddingTop: 8,
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     bottom: Platform.OS === "ios" ? 22 : 5,
     height: 3,
     width: 20,
-    backgroundColor: "#34D399",
+    backgroundColor: "#FF0000",
     borderRadius: 10,
   },
   chatbotContainer: {

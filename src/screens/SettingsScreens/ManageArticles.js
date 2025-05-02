@@ -188,7 +188,7 @@ export default function ManageArticles() {
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#34D399" />
+        <ActivityIndicator size="large" color="#FF0000" />
       </View>
     )
   }
@@ -207,7 +207,7 @@ export default function ManageArticles() {
     >
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-          <MaterialCommunityIcons name="arrow-left" size={24} color="#333" />
+          <MaterialCommunityIcons name="arrow-left" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{isEditing ? "Editar Artículo" : "Crear Artículo"}</Text>
         <View style={styles.placeholder} />
@@ -222,7 +222,7 @@ export default function ManageArticles() {
             <MaterialCommunityIcons
               name={isEditing ? "file-document-edit" : "file-plus-outline"}
               size={48}
-              color="#34D399"
+              color="#FF0000"
               style={styles.headerIcon}
             />
             <Text style={styles.headerText}>
@@ -234,14 +234,14 @@ export default function ManageArticles() {
           <View style={styles.section}>
             
             <View style={styles.sectionHeader}>
-              <MaterialCommunityIcons name="image" size={24} color="#34D399" />
+              <MaterialCommunityIcons name="image" size={24} color="#FF0000" />
               <Text style={styles.sectionTitle}>Imagen</Text>
             </View>
 
             <View style={styles.inputGroup}>
               <Text style={styles.inputLabel}>URL de la Imagen</Text>
               <View style={[styles.inputContainer, { alignItems: "center", flexDirection: "row", flex: 1 }]}> 
-                <MaterialCommunityIcons name="link-variant" size={20} color="#34D399" />
+                <MaterialCommunityIcons name="link-variant" size={20} color="#FF0000" />
                 <TextInput
                   style={[styles.input, { flex: 1, maxWidth: "100%" }]} 
                   value={articleData.imageUrl}
@@ -266,14 +266,14 @@ export default function ManageArticles() {
 
           <View style={styles.section}>
             <View style={styles.sectionHeader}>
-              <MaterialCommunityIcons name="text" size={24} color="#34D399" />
+              <MaterialCommunityIcons name="text" size={24} color="#FF0000" />
               <Text style={styles.sectionTitle}>Contenido</Text>
             </View>
 
             <View style={styles.inputGroup}>
               <Text style={styles.inputLabel}>Título</Text>
               <View style={[styles.inputContainer, { alignItems: "center" }]}>
-                <MaterialCommunityIcons name="format-title" size={20} color="#34D399" />
+                <MaterialCommunityIcons name="format-title" size={20} color="#FF0000" />
                 <TextInput
                   style={styles.input}
                   value={articleData.title}
@@ -287,7 +287,7 @@ export default function ManageArticles() {
             <View style={styles.inputGroup}>
               <Text style={styles.inputLabel}>Descripción Corta</Text>
               <View style={[styles.inputContainer, styles.textAreaContainer, { alignItems: "center" }]}>
-                <MaterialCommunityIcons name="card-text-outline" size={20} color="#34D399" />
+                <MaterialCommunityIcons name="card-text-outline" size={20} color="#FF0000" />
                 <TextInput
                   style={[styles.input, styles.textArea]}
                   value={articleData.description}
@@ -303,7 +303,7 @@ export default function ManageArticles() {
             <View style={styles.inputGroup}>
               <Text style={styles.inputLabel}>Contenido Completo</Text>
               <View style={[styles.inputContainer, styles.textAreaContainer, { height: 150 }]}>
-                <MaterialCommunityIcons name="file-document-outline" size={20} color="#34D399" />
+                <MaterialCommunityIcons name="file-document-outline" size={20} color="#FF0000" />
                 <TextInput
                   style={[styles.input, styles.textArea]}
                   value={articleData.content}
@@ -318,14 +318,14 @@ export default function ManageArticles() {
 
           <View style={styles.section}>
             <View style={styles.sectionHeader}>
-              <MaterialCommunityIcons name="tag-multiple" size={24} color="#34D399" />
+              <MaterialCommunityIcons name="tag-multiple" size={24} color="#FF0000" />
               <Text style={styles.sectionTitle}>Clasificación</Text>
             </View>
 
             <View style={styles.inputGroup}>
               <Text style={styles.inputLabel}>Fecha</Text>
               <View style={styles.inputContainer}>
-                <MaterialCommunityIcons name="calendar" size={20} color="#34D399" />
+                <MaterialCommunityIcons name="calendar" size={20} color="#FF0000" />
                 <Text style={styles.nonEditableText}>{articleData.date}</Text>
               </View>
             </View>
@@ -333,7 +333,7 @@ export default function ManageArticles() {
             <View style={styles.inputGroup}>
               <Text style={styles.inputLabel}>Categoría</Text>
               <TouchableOpacity style={styles.categoryContainer} activeOpacity={0.7}>
-                <MaterialCommunityIcons name="shape" size={20} color="#34D399" />
+                <MaterialCommunityIcons name="shape" size={20} color="#FF0000" />
                 <View style={styles.pickerWrapper}>
                   <RNPickerSelect
                     onValueChange={(value) => setArticleData((prev) => ({ ...prev, category: value }))}
@@ -343,7 +343,7 @@ export default function ManageArticles() {
                     placeholder={{ label: "Selecciona una categoría...", value: null }}
                     useNativeAndroidPickerStyle={false}
                     Icon={() => {
-                      return <MaterialCommunityIcons name="chevron-down" size={24} color="#34D399" />
+                      return <MaterialCommunityIcons name="chevron-down" size={24} color="#FF0000" />
                     }}
                   />
                 </View>
@@ -357,12 +357,12 @@ export default function ManageArticles() {
                 onPress={() => setArticleData((prev) => ({ ...prev, featured: !prev.featured }))}
               >
                 <View style={styles.switchLabel}>
-                  <MaterialCommunityIcons name="star" size={20} color="#34D399" />
+                  <MaterialCommunityIcons name="star" size={20} color="#FF0000" />
                   <Text style={styles.switchText}>Destacado</Text>
                 </View>
                 <Switch
-                  trackColor={{ false: "#e0e0e0", true: "#a7f3d0" }}
-                  thumbColor={articleData.featured ? "#34D399" : "#f4f3f4"}
+                  trackColor={{ false: "#e0e0e0", true: "#f3a7ba" }}
+                  thumbColor={articleData.featured ? "#FF0000" : "#f4f3f4"}
                   ios_backgroundColor="#e0e0e0"
                   onValueChange={(value) => setArticleData((prev) => ({ ...prev, featured: value }))}
                   value={articleData.featured}
@@ -423,7 +423,7 @@ export default function ManageArticles() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "#000000",
   },
   scrollContainer: {
     flex: 1,
@@ -432,7 +432,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "#000000",
   },
   header: {
     flexDirection: "row",
@@ -440,14 +440,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingHorizontal: 16,
     paddingVertical: 16,
-    backgroundColor: "#fff",
+    backgroundColor: "#111111",
     borderBottomWidth: 1,
-    borderBottomColor: "#f0f0f0",
-    elevation: 2,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
+    borderBottomColor: "#222222",
   },
   backButton: {
     padding: 8,
@@ -455,7 +450,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#333",
+    color: "#fff",
   },
   placeholder: {
     width: 40,
@@ -476,14 +471,14 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#333",
+    color: "#fff",
     textAlign: "center",
   },
   formContainer: {
     padding: 16,
   },
   section: {
-    backgroundColor: "#fff",
+    backgroundColor: "#111111",
     borderRadius: 12,
     padding: 16,
     marginBottom: 16,
@@ -498,14 +493,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 16,
     borderBottomWidth: 1,
-    borderBottomColor: "#f0f0f0",
+    borderBottomColor: "#222222",
     paddingBottom: 12,
     gap: 12,
   },
   sectionTitle: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#333",
+    color: "#fff",
   },
   inputGroup: {
     marginBottom: 16,
@@ -513,16 +508,16 @@ const styles = StyleSheet.create({
   inputLabel: {
     fontSize: 14,
     fontWeight: "600",
-    color: "#333",
+    color: "#fff",
     marginBottom: 8,
   },
   inputContainer: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "#222222",
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: "#e0e0e0",
+    borderColor: "#333333",
     minHeight: 50,
     paddingHorizontal: 12,
     gap: 10,
@@ -530,7 +525,7 @@ const styles = StyleSheet.create({
   input: {
     flex: 1,
     fontSize: 16,
-    color: "#333",
+    color: "#fff",
     paddingVertical: 8,
   },
   textAreaContainer: {
@@ -541,6 +536,7 @@ const styles = StyleSheet.create({
   textArea: {
     height: "100%",
     textAlignVertical: "top",
+    color: "#fff",
   },
   imagePreviewContainer: {
     marginTop: 16,
@@ -548,23 +544,23 @@ const styles = StyleSheet.create({
   previewLabel: {
     fontSize: 14,
     fontWeight: "600",
-    color: "#333",
+    color: "#fff",
     marginBottom: 8,
   },
   articleImage: {
     width: "100%",
     height: 200,
     borderRadius: 12,
-    backgroundColor: "#e0e0e0",
+    backgroundColor: "#333333",
     resizeMode: "cover",
   },
   categoryContainer: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "#222222",
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: "#e0e0e0",
+    borderColor: "#333333",
     minHeight: 50,
     paddingHorizontal: 12,
     gap: 10,
@@ -581,7 +577,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "#222222",
     borderRadius: 12,
     padding: 12,
     marginBottom: 12,
@@ -593,7 +589,7 @@ const styles = StyleSheet.create({
   },
   switchText: {
     fontSize: 16,
-    color: "#333",
+    color: "#fff",
     fontWeight: "500",
   },
   buttonsContainer: {
@@ -635,7 +631,7 @@ const styles = StyleSheet.create({
   },
   nonEditableText: {
     fontSize: 16,
-    color: "#333",
+    color: "#fff",
     marginLeft: 10,
     flex: 1, // Ensures the text takes up available space without centering
   },
@@ -646,7 +642,7 @@ const pickerSelectStyles = StyleSheet.create({
     fontSize: 16,
     paddingVertical: 12,
     paddingHorizontal: 0,
-    color: "#333",
+    color: "#fff",
     paddingRight: 30,
     height: 50,
   },
@@ -654,7 +650,7 @@ const pickerSelectStyles = StyleSheet.create({
     fontSize: 16,
     paddingHorizontal: 0,
     paddingVertical: 8,
-    color: "#333",
+    color: "#fff",
     paddingRight: 30,
     height: 50,
   },

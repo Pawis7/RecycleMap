@@ -175,7 +175,7 @@ export const LoginScreen = ({ navigation }) => {
     <View style={loginStyles.container}>
       <StatusBar barStyle="light-content" />
       <LinearGradient
-        colors={["#1e3a2f", "#2d5f41", "#34D399"]}
+        colors={["#000000", "#1a0000", "#FF0000"]}
         style={loginStyles.backgroundGradient}
       />
       
@@ -236,7 +236,7 @@ export const LoginScreen = ({ navigation }) => {
                 ]}
               >
                 <View style={loginStyles.inputContainer}>
-                  <MaterialCommunityIcons name="email-outline" size={24} color="#34D399" style={loginStyles.inputIcon} />
+                  <MaterialCommunityIcons name="email-outline" size={24} color="#FF0000" style={loginStyles.inputIcon} />
                   <TextInput
                     style={loginStyles.textInput}
                     placeholder="Correo Electrónico"
@@ -254,7 +254,7 @@ export const LoginScreen = ({ navigation }) => {
                 </View>
                 
                 <View style={loginStyles.inputContainer}>
-                  <MaterialCommunityIcons name="lock-outline" size={24} color="#34D399" style={loginStyles.inputIcon} />
+                  <MaterialCommunityIcons name="lock-outline" size={24} color="#FF0000" style={loginStyles.inputIcon} />
                   <TextInput
                     style={loginStyles.textInput}
                     placeholder="Contraseña"
@@ -304,7 +304,7 @@ export const LoginScreen = ({ navigation }) => {
                     onPress={() => {
                       setChecked(!checked);
                     }}
-                    color={checked ? "#34D399" : "rgba(255, 255, 255, 0.5)"}
+                    color={checked ? "#FF0000" : "rgba(255, 255, 255, 0.5)"}
                     uncheckedColor="rgba(255, 255, 255, 0.5)"
                   />
                   <Text style={loginStyles.rememberText}>Recuérdame</Text>
@@ -482,12 +482,12 @@ const loginStyles = StyleSheet.create({
     fontSize: 14,
   },
   forgotPassword: {
-    color: "#34D399",
+    color: "#FF0000",
     fontSize: 14,
     fontWeight: "500",
   },
   loginButton: {
-    backgroundColor: "#34D399",
+    backgroundColor: "#FF0000",
     width: width * 0.85,
     height: 55,
     borderRadius: 12,

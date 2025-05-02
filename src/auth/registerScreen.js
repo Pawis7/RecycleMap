@@ -189,7 +189,7 @@ export const RegisterScreen = ({ navigation }) => {
   return (
     <View style={registerStyles.container}>
       <StatusBar barStyle="light-content" />
-      <LinearGradient colors={["#1e3a2f", "#2d5f41", "#34D399"]} style={registerStyles.backgroundGradient} />
+      <LinearGradient colors={["#000000", "#1a0000", "#FF0000"]} style={registerStyles.backgroundGradient} />
 
       <SafeAreaView style={{ flex: 1 }}>
         <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === "ios" ? "padding" : "height"}>
@@ -242,7 +242,7 @@ export const RegisterScreen = ({ navigation }) => {
                 <MaterialCommunityIcons
                   name="account-outline"
                   size={24}
-                  color="#34D399"
+                  color="#FF0000"
                   style={registerStyles.inputIcon}
                 />
                 <TextInput
@@ -262,7 +262,7 @@ export const RegisterScreen = ({ navigation }) => {
                 <MaterialCommunityIcons
                   name="email-outline"
                   size={24}
-                  color="#34D399"
+                  color="#FF0000"
                   style={registerStyles.inputIcon}
                 />
                 <TextInput
@@ -283,7 +283,7 @@ export const RegisterScreen = ({ navigation }) => {
                 <MaterialCommunityIcons
                   name="lock-outline"
                   size={24}
-                  color="#34D399"
+                  color="#FF0000"
                   style={registerStyles.inputIcon}
                 />
                 <TextInput
@@ -311,7 +311,7 @@ export const RegisterScreen = ({ navigation }) => {
                 <MaterialCommunityIcons
                   name="lock-check-outline"
                   size={24}
-                  color="#34D399"
+                  color="#FF0000"
                   style={registerStyles.inputIcon}
                 />
                 <TextInput
@@ -346,7 +346,7 @@ export const RegisterScreen = ({ navigation }) => {
                 <Checkbox
                   status={checked ? "checked" : "unchecked"}
                   onPress={() => setChecked(!checked)}
-                  color={checked ? "#34D399" : "rgba(255, 255, 255, 0.5)"}
+                  color={checked ? "#FF0000" : "rgba(255, 255, 255, 0.5)"}
                   uncheckedColor="rgba(255, 255, 255, 0.5)"
                 />
                 <Text style={registerStyles.tosText}>He Leido y Acepto </Text>
@@ -500,13 +500,13 @@ const registerStyles = StyleSheet.create({
     fontSize: 14,
   },
   tosLink: {
-    color: "#34D399",
+    color: "#FF0000",
     fontSize: 14,
     fontWeight: "500",
     textDecorationLine: "underline",
   },
   registerButton: {
-    backgroundColor: "#34D399",
+    backgroundColor: "#FF0000",
     width: width * 0.85, // Mismo ancho que los inputs
     height: 55,
     borderRadius: 12,

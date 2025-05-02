@@ -120,7 +120,7 @@ export default function EditProfile() {
   if (loading || !userData) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#34D399" />
+        <ActivityIndicator size="large" color="#FF0000" />
       </View>
     );
   }
@@ -134,7 +134,7 @@ export default function EditProfile() {
       <ScrollView style={styles.scrollContainer}>
         <View style={styles.header}>
           <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-            <MaterialCommunityIcons name="arrow-left" size={24} color="#333" />
+            <MaterialCommunityIcons name="arrow-left" size={24} color="#fff" />
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Editar Perfil</Text>
           <View style={styles.placeholder} />
@@ -155,7 +155,7 @@ export default function EditProfile() {
           <View style={styles.inputGroup}>
             <Text style={styles.inputLabel}>Nombre</Text>
             <View style={styles.inputContainer}>
-              <MaterialCommunityIcons name="account" size={20} color="#34D399" style={styles.inputIcon} />
+              <MaterialCommunityIcons name="account" size={20} color="#FF0000" style={styles.inputIcon} />
               <TextInput
                 style={styles.input}
                 value={userData.nombre}
@@ -169,7 +169,7 @@ export default function EditProfile() {
           <View style={styles.inputGroup}>
             <Text style={styles.inputLabel}>Correo electrónico</Text>
             <View style={styles.inputContainer}>
-              <MaterialCommunityIcons name="email" size={20} color="#34D399" style={styles.inputIcon} />
+              <MaterialCommunityIcons name="email" size={20} color="#FF0000" style={styles.inputIcon} />
               <TextInput
                 style={[styles.input, { color: "#999" }]}
                 value={userData.email}
@@ -200,7 +200,7 @@ export default function EditProfile() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "#000000",
   },
   scrollContainer: {
     flex: 1,
@@ -209,7 +209,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "#000000",
   },
   header: {
     flexDirection: "row",
@@ -217,9 +217,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingHorizontal: 16,
     paddingVertical: 16,
-    backgroundColor: "#fff",
+    backgroundColor: "#111111",
     borderBottomWidth: 1,
-    borderBottomColor: "#f0f0f0",
+    borderBottomColor: "#222222",
   },
   backButton: {
     padding: 8,
@@ -227,7 +227,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#333",
+    color: "#fff",
   },
   placeholder: {
     width: 40,
@@ -241,12 +241,12 @@ const styles = StyleSheet.create({
     height: 100,
     borderRadius: 50,
     borderWidth: 3,
-    borderColor: "#34D399",
+    borderColor: "#FF0000",
   },
   changePhotoButton: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#34D399",
+    backgroundColor: "#FF0000",
     paddingHorizontal: 16,
     paddingVertical: 8,
     borderRadius: 20,
@@ -272,10 +272,10 @@ const styles = StyleSheet.create({
   inputContainer: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#fff",
+    backgroundColor: "#111111",
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: "#e0e0e0",
+    borderColor: "#333",
     height: 50,
     paddingHorizontal: 12,
   },
@@ -285,7 +285,7 @@ const styles = StyleSheet.create({
   input: {
     flex: 1,
     fontSize: 16,
-    color: "#333",
+    color: "#fff",
   },
   helperText: {
     fontSize: 12,
@@ -295,7 +295,7 @@ const styles = StyleSheet.create({
   },
   saveButton: {
     flexDirection: "row",
-    backgroundColor: "#34D399",
+    backgroundColor: "#FF0000",
     borderRadius: 12,
     padding: 16,
     margin: 16,

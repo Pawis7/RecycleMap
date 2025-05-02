@@ -58,7 +58,7 @@ const ArticleCard = ({ article, onPress }) => {
 const styles = StyleSheet.create({
   container: {
     width: width * 0.85,
-    backgroundColor: '#fff',
+    backgroundColor: '#111111', // Fondo negro
     borderRadius: 12,
     marginRight: 16,
     shadowColor: '#000',
@@ -83,13 +83,13 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 10,
     left: 10,
-    backgroundColor: '#34D399',
+    backgroundColor: '#34D399', // Fondo verde
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 4,
   },
   featuredText: {
-    color: '#fff',
+    color: '#ffffff', // Texto blanco
     fontSize: 12,
     fontWeight: 'bold',
   },
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#333',
+    color: '#ffffff', // Texto blanco
     flex: 1,
   },
   newBadge: {
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 14,
-    color: '#666',
+    color: '#aaaaaa', // Texto gris claro
     marginBottom: 8,
     lineHeight: 20,
   },
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
   },
   metaText: {
     fontSize: 12,
-    color: '#666',
+    color: '#aaaaaa', // Texto gris claro
     marginLeft: 4,
   },
 });
