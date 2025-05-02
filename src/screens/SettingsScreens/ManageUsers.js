@@ -31,7 +31,6 @@ export default function ManageUsers() {
         }
 
         const userId = session.session.user.id 
-        console.log("Current User ID:", userId)
 
         const { data: userInfo, error: infoError } = await supabase
           .from("users")
@@ -39,7 +38,6 @@ export default function ManageUsers() {
           .eq("id", userId) 
           .single()
 
-        console.log("Supabase response for user role query:", { data: userInfo, error: infoError })
 
         if (infoError || !userInfo || userInfo.role !== "admin") {
           navigation.replace("Main") 

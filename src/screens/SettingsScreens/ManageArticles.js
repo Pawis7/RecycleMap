@@ -259,7 +259,6 @@ export default function ManageArticles() {
               <Image
                 source={isValidUrl(articleData.imageUrl) ? { uri: articleData.imageUrl } : null}
                 style={styles.articleImage}
-                onError={(e) => console.log("Error loading image:", e.nativeEvent.error)}
               />
             </View>
           </View>
